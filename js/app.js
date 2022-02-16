@@ -5,7 +5,8 @@ document.getElementById('login-btn').addEventListener("click", function() {
     const password = passwrodInput.value;
     console.log("clicked", email, password);
 
-    if (email == 'admin@gmail.com' && password == 'sec') {
+    if (email === 'admin@gmail.com' && password === '123') {
+        window.location.href = 'pc-builder.html';
 
     }
 });
