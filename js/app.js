@@ -1,9 +1,11 @@
 document.getElementById('login-btn').addEventListener("click", function() {
-    const emailInput = document.getElementById('email-input').value;
-    const passwrodInput = document.getElementById('password-input').value;
-    console.log("clicked", emailInput, passwrodInput);
+    const emailInput = document.getElementById('email-input');
+    const email = emailInput.value;
+    const passwrodInput = document.getElementById('password-input');
+    const password = passwrodInput.value;
+    console.log("clicked", email, password);
 
-    if (emailInput === 'admin.gmail.com' && passwrodInput === 1234) {
-        console.log('done');
+    if (email == 'admin@gmail.com' && password == 'sec') {
+
     }
 });
