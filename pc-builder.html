@@ -7,13 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pc Builder-DOM</title>
 
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!--  -->
 
     <!-- Bootstrap CDN -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--  -->
 
+
+
     <link rel="stylesheet" href="style.css">
+
 
 
 </head>
@@ -22,49 +29,99 @@
     <section>
         <div class="container border py-5">
             <div class="row border">
+                <!-- Left -->
                 <div class="col-md-6">
-                    <img src="images/mac.png" width="580px" class="img-fluid pb-4" alt="">
+                    <img src="images/mac.png" width="480px" class="img-fluid pb-4" alt="">
                     <p class="fs-5 lh-lg">Apple M1 chip with 8-core CPU with 4 performances and 4 efficiency cores, <br> 7-core GPU and 16-core Neural Engine <br> *GB unified memory <br> 256GB SSD storage <br>Two Thunderbolt / USB 4 ports Magic Mouse <br>Magic KeyBoard-US
                         English
                     </p>
                 </div>
-                <!--  -->
+                <!-- Left ENDS -->
 
-                <!-- Right -->
+                <!-- Right STRATS -->
                 <div class="col-md-6">
-                    <h1 class="display-3 fw-bold ">iMac with Apple M1 Chip</h1>
+                    <h1 class="display-5 fw-bold ">iMac with Apple M1 Chip</h1>
 
-                    <!-- memory -->
-                    <div>
-                        <div class="row">
-                            <div class="col-md-3">Memory</div>
-                            <div class="col-md-4">8GB Unified Memory</div>
-                            <div class="col-md-4"> <i></i> 16GB Unified Memory </div>
+                    <div class="">
+                        <!-- memory -->
+                        <div class="line">
+                            <div class="row">
+                                <div class="col-md-3 fw-bold">Memory</div>
+                                <div class="col-md-4 button-style"> 8GB Unified Memory</div>
+                                <div id="sixteen-memory" class="col-md-4 button-style"> <i class="fa-solid fa-circle-plus"></i> 16GB Unified Memory </div>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <!-- storage -->
+                        <div class="line">
+                            <div class="row">
+                                <div class="col-md-3 fw-bold">Storage</div>
+                                <div id="two-fifty-six-storage" class="col-md-3 button-style">256GB SSD Storage </div>
+                                <div class="col-md-3 button-style"> <i class="fa-solid fa-circle-plus"></i> 512GB SSD Storage</div>
+                                <div class="col-md-3 button-style"> <i class="fa-solid fa-circle-plus"></i> 1TB SSD Storage </div>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <!-- Choose your delivery option -->
+                        <div class="line">
+                            <div class="row">
+                                <div class="col-md-3 fw-bold">Choose your delivery option</div>
+                                <div class="col-md-4 button-style"> Friday, Aug 25 FREE Prime Delivery </div>
+                                <div class="col-md-4 button-style"> <i class="fa-solid fa-circle-plus"></i> Friday, Aug21 Delivery Charge $20 </div>
+                            </div>
                         </div>
                     </div>
                     <!--  -->
 
-                    <!-- storage -->
-                    <div>
-                        <div class="row">
-                            <div class="col-md-3">Storage</div>
-                            <div class="col-md-3">256GB SSD Storage </div>
-                            <div class="col-md-3"> <i></i> 512GB SSD Storage</div>
-                            <div class="col-md-3"> <i></i> 1TB SSD Storage </div>
+                    <!-- PRICES SARTS -->
+                    <div class="row py-5 prices">
+                        <!--  -->
+                        <div class="col-md-5">
+                            <p class="">Best Price</p>
+                            <p class="">Extra Memory Cost</p>
+                            <p class="">Extra Storage Cost</p>
+                            <p>Delivery Charge</p>
                         </div>
-                    </div>
-                    <!--  -->
 
-                    <!-- Choose your delivery option -->
-                    <div>
-                        <div class="row">
-                            <div class="col-md-3">Choose your delivery option</div>
-                            <div class="col-md-4">Friday, Aug 25 FREE Prime Delivery </div>
-                            <div class="col-md-4"> <i></i> Friday, Aug21 Delivery Charge $20 </div>
+                        <div class="col-md-7">
+                            <p class="">$<span id="best-price">1299</span></p>
+                            <p class="">$<span id="memory-cost">0</span></p>
+                            <p class="">$<span id="storage-cost">0</span></p>
+                            <p class="">$<span id="delivery-cost">0</span></p>
                         </div>
+
+                        <div class="col-7 ">
+                            <hr class="bold-line">
+                        </div>
+                        <!--  -->
+
+                        <!-- Total Price -->
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p>Total Price</p>
+                            </div>
+                            <div class="col-md-7">$1299</div>
+                        </div>
+                        <!-- TOTAL PRICE ENDS -->
+
+                        <!-- PROMO CODE STARTS -->
+                        <div>
+                            <h3>Add promo Code</h3>
+                            <input type="text" class="p-2" id="promo-input" placeholder="Enter Promo Code" />
+                            <button class="btn-secondary rounded py-2 px-3" id="apply-btn">Apply</button>
+
+
+                            <p class="text-success d-none" id="applied-text">Coupon applied</p>
+                            <p class="text-danger d-none">Couldn't apply coupon</p>
+                        </div>
+
+                        <!-- PROMO CODE ENDS -->
                     </div>
-                    <!--  -->
+                    <!-- PRICES ENDS  -->
                 </div>
+                <!-- RIGHT ENDS -->
             </div>
         </div>
     </section>

@@ -1,12 +1,12 @@
-document.getElementById('login-btn').addEventListener("click", function() {
-    const emailInput = document.getElementById('email-input');
-    const email = emailInput.value;
-    const passwrodInput = document.getElementById('password-input');
-    const password = passwrodInput.value;
-    console.log("clicked", email, password);
+document.getElementById('sixteen-memory').addEventListener("click", function() {
 
-    if (email === 'admin@gmail.com' && password === '123') {
-        window.location.href = 'pc-builder.html';
+    const memoryCost = document.getElementById('memory-cost');
+    memoryCost.innerText = 200;
 
-    }
+    const bestPrice = document.getElementById('best-price').innerText;
+    const memoryCost = document.getElementById('memory-cost').innerText;
+    const storageCost = document.getElementById('storage-cost').innerText;
+    const delieryCost = document.getElementById('delivery-cost').innerText;
+
+    const totalPrice = parseFloat(bestPrice) + parseFloat(memoryCost) + parseFloat(storageCost) + parseFloat(delieryCost);
 });
